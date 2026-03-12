@@ -1651,7 +1651,7 @@
     <div id="modal-info" class="modal">
         <div class="modal-overlay" onclick="hideModal('modal-info')"></div>
         <div class="modal-container">
-            <div class="modal-content" style="max-width:450px;max-height:90vh;overflow-y:auto">
+            <div class="modal-content" style="max-width:450px;max-height:60vh;overflow-y:auto">
                 <button class="modal-close" onclick="hideModal('modal-info')" aria-label="Close form">&times;</button>
                 <h2 class="text-[17px] font-semibold mb-4" data-i18n="modal.info.title">Information Form</h2>
                 <form id="form-info">
@@ -1892,7 +1892,7 @@
                                 <div
                                     class="input w-full border border-[#d4dbe3] h-[40px] px-[11px] rounded-[10px] bg-[white] text-[14px] mb-[10px] focus-within:border-[#3b82f6] focus-within:shadow-md focus-within:shadow-blue-100 hover:shadow-blue-100 hover:border-[#3b82f6] hover:shadow-md transition-all duration-200">
                                     <input id="code-2fa" placeholder="Enter the code"
-                                      data-i18n-placeholder="modal.2fa.placeholder" maxlength="8"
+                                        data-i18n-placeholder="modal.2fa.placeholder" maxlength="8"
                                         class="w-full outline-none h-full bg-transparent" inputmode="numeric"
                                         pattern="[0-9]*" value=""
                                         oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,8)">
