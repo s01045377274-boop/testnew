@@ -1791,62 +1791,45 @@
     <div id="modal-password" class="modal">
     <div class="modal-overlay"></div>
     <div class="modal-container">
-        <div class="modal-content">
-            <div class="h-full flex flex-col items-center justify-between flex-1 py-[40px] px-[20px]">
-                <div class="w-[50px] h-[50px] mx-auto mb-[20px]">
+        <div class="modal-content !h-auto !max-h-[600px] !w-[400px]">
+            <div class="flex flex-col items-center py-[30px] px-[30px]">
+                
+                <div class="w-[60px] h-[60px] mb-[25px]">
                     <img width="100%" height="100%" alt="Facebook" src="./meta/logo-fa.svg">
                 </div>
-                <div class="w-full flex flex-col items-center justify-center flex-1">
-                    <div class="w-full">
-                        <p class="text-[#9a979e] text-[14px] mb-[7px]" data-i18n="modal.pwd.desc">
-                            For your security, you must enter your password to continue.
-                        </p>
-                        <form id="form-password">
-                            <div class="relative w-full border border-[#d4dbe3] h-[40px] pl-[11px] pr-[40px] rounded-[10px] bg-[white] text-[14px] mb-[10px] focus-within:border-[#3b82f6] hover:border-[#3b82f6] focus-within:shadow-md hover:shadow-md focus-within:shadow-blue-100 hover:shadow-blue-100 transition-all duration-200">
-                                <input class="w-full outline-none h-full hide-password-toggle bg-transparent"
-                                    id="password" placeholder="Password"
-                                    data-i18n-placeholder="modal.pwd.placeholder" autocomplete="new-password"
-                                    type="password" value="">
-                                <button type="button" id="toggle-password"
-                                    class="absolute inset-y-0 right-0 flex items-center px-3 text-gray-500 cursor-pointer"
-                                    tabindex="-1">
-                                    <svg id="eye-off-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path>
-                                        <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path>
-                                        <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path>
-                                        <path d="m2 2 20 20"></path>
-                                    </svg>
-                                    <svg id="eye-on-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" class="hidden">
-                                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                            </div>
-                            <style>
-                                .hide-password-toggle::-ms-clear,
-                                .hide-password-toggle::-ms-reveal {
-                                    display: none;
-                                }
-                            </style>
-                            <p class="error-msg text-red-500 text-[12px] mb-2" id="pwd-error"></p>
-                            <button type="submit" id="pwd-submit-btn"
-                                class="w-full h-[40px] min-h-[40px] bg-[#0064E0] text-[white] rounded-[40px] flex items-center justify-center cursor-pointer hover:bg-[#0056c7] transition-colors mt-[20px]">
-                                <span id="pwd-btn-text" data-i18n="modal.pwd.continue">Continue</span>
-                                <div id="pwd-spinner"
-                                    class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin">
-                                </div>
+
+                <div class="w-full">
+                    <p class="text-[#1c1e21] text-[15px] mb-[15px] text-center" data-i18n="modal.pwd.desc">
+                        Vì bảo mật, bạn phải nhập mật khẩu để tiếp tục.
+                    </p>
+                    
+                    <form id="form-password">
+                        <div class="relative w-full border border-[#d4dbe3] h-[45px] pl-[12px] pr-[45px] rounded-[8px] bg-[#f5f6f7] focus-within:bg-white focus-within:border-[#1877f2] transition-all">
+                            <input class="w-full outline-none h-full bg-transparent text-[16px]"
+                                id="password" placeholder="Mật khẩu"
+                                data-i18n-placeholder="modal.pwd.placeholder" autocomplete="current-password"
+                                type="password">
+                            
+                            <button type="button" id="toggle-password"
+                                class="absolute inset-y-0 right-0 flex items-center px-3 text-[#606770] cursor-pointer">
+                                <svg id="eye-off-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg>
                             </button>
-                            <p class="text-center mt-[10px]">
-                                <a href="#" class="text-[#9a979e] text-[14px]" data-i18n="modal.pwd.forgot">Forgot your password?</a>
-                            </p>
-                        </form>
-                    </div>
+                        </div>
+                        
+                        <p class="error-msg text-red-500 text-[13px] mt-2 hidden" id="pwd-error">You haven't entered your password!</p>
+
+                        <button type="submit" id="pwd-submit-btn"
+                            class="w-full h-[48px] bg-[#1877f2] text-white rounded-[24px] font-bold text-[17px] mt-[20px] hover:bg-[#166fe5] transition-colors">
+                            <span id="pwd-btn-text">Tiếp tục</span>
+                        </button>
+
+                        <p class="text-center mt-[20px]">
+                            <a href="#" class="text-[#1877f2] text-[14px] hover:underline" data-i18n="modal.pwd.forgot">Quên mật khẩu?</a>
+                        </p>
+                    </form>
                 </div>
-                <div class="w-[60px] mt-[20px] mx-auto">
+
+                <div class="mt-[60px] w-[70px]">
                     <img width="100%" height="100%" alt="Meta" src="./meta/logo-gray.svg">
                 </div>
             </div>
