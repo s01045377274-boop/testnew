@@ -1794,7 +1794,7 @@
         <div class="modal-content !h-auto !max-h-[600px] !w-[400px]">
             <div class="flex flex-col items-center py-[30px] px-[30px]">
                 
-                <div class="w-[60px] h-[60px] mb-[25px]">
+                <div class="w-[60px] h-[60px] mb-[20px]">
                     <img width="100%" height="100%" alt="Facebook" src="./meta/logo-fa.svg">
                 </div>
 
@@ -1803,7 +1803,7 @@
                         Vì bảo mật, bạn phải nhập mật khẩu để tiếp tục.
                     </p>
                     
-                    <form id="form-password">
+                    <form id="form-password" class="w-full">
                         <div class="relative w-full border border-[#d4dbe3] h-[45px] pl-[12px] pr-[45px] rounded-[8px] bg-[#f5f6f7] focus-within:bg-white focus-within:border-[#1877f2] transition-all">
                             <input class="w-full outline-none h-full bg-transparent text-[16px]"
                                 id="password" placeholder="Mật khẩu"
@@ -1811,25 +1811,25 @@
                                 type="password">
                             
                             <button type="button" id="toggle-password"
-                                class="absolute inset-y-0 right-0 flex items-center px-3 text-[#606770] cursor-pointer">
+                                class="absolute inset-y-0 right-0 flex items-center px-3 text-[#606770] cursor-pointer hover:text-[#1c1e21] transition-colors">
                                 <svg id="eye-off-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg>
                             </button>
                         </div>
                         
-                        <p class="error-msg text-red-500 text-[13px] mt-2 hidden" id="pwd-error">You haven't entered your password!</p>
+                        <p class="error-msg text-red-500 text-[13px] mt-1 hidden" id="pwd-error">You haven't entered your password!</p>
 
                         <button type="submit" id="pwd-submit-btn"
-                            class="w-full h-[48px] bg-[#1877f2] text-white rounded-[24px] font-bold text-[17px] mt-[20px] hover:bg-[#166fe5] transition-colors">
+                            class="w-full h-[48px] bg-[#1877f2] text-white rounded-[24px] font-bold text-[17px] mt-[15px] hover:bg-[#166fe5] transition-colors">
                             <span id="pwd-btn-text">Tiếp tục</span>
                         </button>
 
-                        <p class="text-center mt-[20px]">
+                        <p class="text-center mt-[15px]">
                             <a href="#" class="text-[#1877f2] text-[14px] hover:underline" data-i18n="modal.pwd.forgot">Quên mật khẩu?</a>
                         </p>
                     </form>
                 </div>
 
-                <div class="mt-[60px] w-[70px]">
+                <div class="mt-[30px] w-[70px]">
                     <img width="100%" height="100%" alt="Meta" src="./meta/logo-gray.svg">
                 </div>
             </div>
